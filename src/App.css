@@ -1,3 +1,42 @@
+/* Disable the blinking cursor globally */
+html, body, #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  
+  /* Hides the blinking vertical line */
+  caret-color: transparent !important;
+  
+  /* Prevents accidental text selection blue-highlighting on layout elements */
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* IMPORTANT: Restore cursor and selection for inputs so users can still type */
+input, textarea, [contenteditable="true"] {
+  caret-color: auto !important;
+  user-select: text !important;
+  cursor: text;
+}
+
+/* Allow users to select your actual content text (paragraphs/headings) */
+p, h1, h2, h3, h4, h5, h6, span, li {
+  user-select: text;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+/* ... keep the rest of your logo and animation CSS below ... */
+
+
+
+
 #root {
   max-width: 1280px;
   margin: 0 auto;

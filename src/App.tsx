@@ -16,7 +16,6 @@ const router = createBrowserRouter(
     { path: "/", element: <Index /> },
     { path: "*", element: <NotFound /> },
   ],
-  // `future` flags are available in newer router types; cast to `any` to opt in safely
   ({ future: { v7_startTransition: true, v7_relativeSplatPath: true } } as any)
 );
 
@@ -25,19 +24,19 @@ const LazyStickyCallButton = React.lazy(() => import("@/components/ui/StickyCall
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <Toaster />
-      <Sonner />      <DisableEditing />      {/* Mobile-only persistent Book a Call button (lazy loaded) */}
-      <React.Suspense fallback={null}>
-        {
-          // Lazy load the component using dynamic import so `require` is not used in the browser
-        }
-        <LazyStickyCallButton />
-      </React.Suspense>
-      {/* Error boundary to surface runtime errors instead of a blank page */}
-      <ErrorBoundary>
-        <RouterProvider router={router} />
-      </ErrorBoundary>
+      {/* We wrap the app in DisableEditing to prevent the cursor behavior */}
+      <DisableEditing>
+        <Toaster />
+        <Sonner />
+        <React.Suspense fallback={null}>
+          <LazyStickyCallButton />
+        </React.Suspense>
+        <ErrorBoundary>
+          <RouterProvider router={router} />
+        </ErrorBoundary>
+      </DisableEditing>
     </TooltipProvider>
   </QueryClientProvider>
 );
+
 export default App;
