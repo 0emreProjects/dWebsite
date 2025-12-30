@@ -24,8 +24,7 @@ const LazyStickyCallButton = React.lazy(() => import("@/components/ui/StickyCall
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      {/* We wrap the app in DisableEditing to prevent the cursor behavior */}
-      <DisableEditing>
+      <DisableEditing> {/* <--- EVERYTHING GOES INSIDE THIS */}
         <Toaster />
         <Sonner />
         <React.Suspense fallback={null}>

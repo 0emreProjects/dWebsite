@@ -1,29 +1,29 @@
-/* Disable the blinking cursor globally */
-html, body, #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-  
-  /* Hides the blinking vertical line */
+
+
+/* 1. Global Reset: Kill the blinking cursor everywhere */
+*, *::before, *::after {
   caret-color: transparent !important;
-  
-  /* Prevents accidental text selection blue-highlighting on layout elements */
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  outline: none !important;
 }
 
-/* IMPORTANT: Restore cursor and selection for inputs so users can still type */
+/* 2. Global Reset: Disable text selection highlighting on the background/layout */
+html, body, #root {
+  -webkit-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+/* 3. SAFETY EXCEPTION: Keep it working for actual forms (Login, Contact, etc.) */
+/* Without this, people won't be able to see where they are typing in your contact forms */
 input, textarea, [contenteditable="true"] {
-  caret-color: auto !important;
+  caret-color: auto !important; 
   user-select: text !important;
-  cursor: text;
 }
 
-/* Allow users to select your actual content text (paragraphs/headings) */
-p, h1, h2, h3, h4, h5, h6, span, li {
-  user-select: text;
+/* 4. CONTENT EXCEPTION: Let people highlight your text if they want to copy it */
+p, h1, h2, h3, h4, h5, h6, span, li, b, i {
+  user-select: text !important;
 }
 
 .logo {
