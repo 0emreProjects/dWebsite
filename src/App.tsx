@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
+import DisableEditing from "@/components/DisableEditing";
 
 const queryClient = new QueryClient();
 
@@ -25,8 +26,7 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
-      <Sonner />
-      {/* Mobile-only persistent Book a Call button (lazy loaded) */}
+      <Sonner />      <DisableEditing />      {/* Mobile-only persistent Book a Call button (lazy loaded) */}
       <React.Suspense fallback={null}>
         {
           // Lazy load the component using dynamic import so `require` is not used in the browser

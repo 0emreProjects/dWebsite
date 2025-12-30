@@ -23,13 +23,6 @@ export const Footer: React.FC = () => {
               of <a href="http://lsgadvisors.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Life Solutions Group</a>.
             </p>
 
-            <div className="mt-6 flex items-center gap-4">
-              <a href="https://lsgadvisors.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
-                <img src="/partner.png" alt="Partner: Life Solutions Group" className="h-8 object-contain" />
-                <span className="text-sm text-muted-foreground">Proud to be partnered with <strong className="text-foreground">Life Solutions Group (LSG)</strong></span>
-              </a>
-            </div>
-
             <div className="flex items-center gap-4 mt-6">
               <motion.a
                 href="https://www.linkedin.com/in/davidscottpratt/"
