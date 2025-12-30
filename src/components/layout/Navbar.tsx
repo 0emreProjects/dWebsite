@@ -80,10 +80,12 @@ export const Navbar: React.FC = () => {
           <div className="hidden lg:flex items-center divide-x divide-border/10">
             <div className="flex items-center space-x-2 pr-6">
               {[
-                { label: "Our Process", href: "#process" },
+                
                 { label: "Sales Roles We Fill", href: "#services" },
-                { label: "Success Stories", href: "#testimonials" },
-                { label: "Why Work With Us", href: "#candidates" }
+                { label: "Our Process", href: "#process" },
+                { label: "Why Work With Us", href: "#candidates" },
+                { label: "Success Stories", href: "#testimonials" }
+                
               ].map((item) => (
                 <div key={item.label} className="px-2">
                   <button
