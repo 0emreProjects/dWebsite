@@ -19,8 +19,7 @@ export const Footer: React.FC = () => {
               </div>
             </div>
             <p className="text-muted-foreground max-w-sm leading-relaxed">
-              The sales engine for high-growth tech companies. A specialized division 
-              of <a href="http://lsgadvisors.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Life Solutions Group</a>.
+              The sales engine for high-growth tech companies.
             </p>
 
             <div className="mt-6 flex items-center gap-4">
@@ -91,8 +90,7 @@ export const Footer: React.FC = () => {
         <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
           <p>© {currentYear} Talent Solutions. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
+            
           </div>
         </div>
       </div>

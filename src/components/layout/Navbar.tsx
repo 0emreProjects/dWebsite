@@ -71,8 +71,8 @@ export const Navbar: React.FC = () => {
           >
             <img src="/logo.jpeg" alt="Talent Solutions logo" className="w-10 h-10 rounded-lg object-cover" />
             <div className="hidden sm:block">
-              <span className="font-display font-semibold text-lg text-foreground">Talent Solutions</span>
-              <span className="block text-xs text-muted-foreground">at LSG</span>
+              <span className="font-display font-semibold text-lg text-foreground">TALENT SOLUTIONS</span>
+
             </div>
           </motion.a>
 
@@ -80,7 +80,7 @@ export const Navbar: React.FC = () => {
           <div className="hidden lg:flex items-center divide-x divide-border/10">
             <div className="flex items-center space-x-2 pr-6">
               {[
-                
+
                 { label: "Sales Roles We Fill", href: "#services" },
                 { label: "Our Process", href: "#process" },
                 { label: "Why Work With Us", href: "#candidates" },
