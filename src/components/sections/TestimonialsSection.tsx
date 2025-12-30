@@ -9,17 +9,17 @@ const testimonials = [
   {
     quote:
       "David and the Talent Solutions team delivered enterprise-grade sales leadership quickly — we hired a VP of Sales who immediately impacted pipeline growth.",
-    name: "Alex Johnson",
-    title: "Executive Sponsor",
+    name: "Marissa Lee",
+    title: "CTO",
     company: "Fortune 500 Enterprise",
     image: "https://i.pravatar.cc/120?img=32",
   },
   {
     quote:
       "They understood our needs and culture, and sent candidates who were the right fit both technically and culturally.",
-    name: "Marissa Lee",
+    name: "Alex Johnson",
     title: "Head of Revenue",
-    company: "AI Startups Inc.",
+    company: "Leading AI Enterprise",
     image: "https://i.pravatar.cc/120?img=12",
   },
   {
@@ -27,7 +27,7 @@ const testimonials = [
       "A fast, professional process — we scaled our sales team with strong performers within 6 weeks.",
     name: "K. Patel",
     title: "Head of Sales",
-    company: "SaaS Scale",
+    company: "Fortune 100 Tech Company",
     // no image; AvatarFallback will show
   },
 ];
