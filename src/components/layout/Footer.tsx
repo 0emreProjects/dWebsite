@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
     <footer className="py-12 border-t border-border bg-card">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-12">
-          {/* Logo & Description */}
+          {/* 1. Logo & Description */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
               <img src="/logo.jpeg" alt="Talent Solutions logo" className="w-10 h-10 rounded-lg object-cover" />
@@ -49,7 +49,7 @@ export const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* 2. Quick Links */}
           <div>
             <h4 className="font-display font-semibold text-foreground mb-4">Quick Links</h4>
             <ul className="space-y-3">
@@ -72,26 +72,38 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Contact */}
-          <div>
+          {/* 3. Contact & QR Code (Bottom Right Area) */}
+          <div className="flex flex-col items-start md:items-end">
             <h4 className="font-display font-semibold text-foreground mb-4">Contact</h4>
-            <ul className="space-y-3 text-muted-foreground">
+            <ul className="space-y-3 text-muted-foreground text-left md:text-right mb-6">
               <li>
                 <a href="mailto:david.pratt@lsgadvisor.com" className="hover:text-primary transition-colors">
                   david.pratt@lsgadvisor.com
                 </a>
               </li>
-              <li>Denvers, MA</li>
+              <li>Danvers, MA</li>
             </ul>
+
+            {/* QR Code Container */}
+            <div className="mt-2 text-center md:text-right">
+              <div className="inline-block p-2 bg-white rounded-xl shadow-sm border border-border">
+                <img 
+                  src="/qr.png" 
+                  alt="Scan QR Code" 
+                  className="w-24 h-24 rounded-sm"
+                />
+              </div>
+              <p className="text-[10px] uppercase tracking-tighter text-muted-foreground mt-2 font-medium">
+                Scan to connect
+              </p>
+            </div>
           </div>
         </div>
 
-        {/* Bottom */}
+        {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
           <p>© {currentYear} Talent Solutions. All rights reserved.</p>
-          <div className="flex items-center gap-6">
-            
-          </div>
+          
         </div>
       </div>
     </footer>
